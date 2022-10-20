@@ -84,3 +84,4 @@ webencodings==0.5.1
 Werkzeug==2.2.2
 widgetsnbextension==4.0.3
 zipp==3.9.0
+gunicorn
