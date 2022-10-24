@@ -40,7 +40,7 @@ def predict():
             values = to_predict_list
             print("form", to_predict_dict)
             print("values", values)
-            model = pickle.load(open('one.pkl', 'rb'))
+            model = pickle.load(open('heart.pkl', 'rb'))
             values = np.asarray(values)
             pred = model.predict(values.reshape(1, -1))[0]
             print("ans", pred)
