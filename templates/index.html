@@ -1,16 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 <div>
-  <h1 class="text-primary mt-lg-4">
+  <h1 class="text-primary mt-lg-4" hidden>
     {% block title %} Cardio Vascular Disease {% endblock %}
   </h1>
-  <h3>
-    A type of disease that affects the heart or blood vessels. The risk of
-    certain cardiovascular diseases may be increased by smoking, high blood
-    pressure, high cholesterol, unhealthy diet, lack of exercise, and obesity.
-  </h3>
-  <h3>
+  <h3 class="text-primary mt-lg-4 text-uppercase">
     An Ensemble Approach to Predict the Presence of Cardio Vascular Disease
     using Machine Learning and Deep Learning.
   </h3>
+  <p class="mt-lg-2 fs-4">
+    The heart muscle is injured when blood flow to the coronary artery is reduced or disrupted, resulting in coronary artery disease, often known as a heart attack. Without human assistance, hidden patterns can be found using machine learning. The suggested methodology intends to create an intelligent agent to detect any coronary heart disease well in advance of any unfavourable event. A dataset including around 70000 records consisting of 11 features is used. The model applies different feature selection techniques such as Pearson correlation & Information Gain Attribute Evaluator. This model is aimed to construct an ensemble method with classification algorithms- Naïve Bayes , Random Forest and Gradient Boosting. The presence or absence of the cardio vascular illness from the characteristics is also determined using the K Nearest Neighbor (KNN) and Support Vector Machine algorithms. AUC is a representation of separability's level or measurement. It demonstrates how well the model can distinguish between classes. The model's accuracy will be evaluated and enhanced.
+  </p>
+
 </div>
 {% endblock %}
