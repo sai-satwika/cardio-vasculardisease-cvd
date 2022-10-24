@@ -5,36 +5,31 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
-# read our pickle file and label our logisticmodel as model
-model = pickle.load(open('heart.pkl', 'rb'))
+
 
 @app.route('/')
 def home():
+    return render_template('index.html')
+
+# ...
+@app.route('/svm')
+def svm():
     return render_template('svm.html')
 
-# @app.route('/predict',methods=['POST','GET'])
+# ...
+@app.route('/ann/')
+def ann():
+    return render_template('ann.html')
 
-def predict(values, dic):
+@app.route('/knn')
+def knn():
+    return render_template('knn.html')
 
-    model = pickle.load(open('heart.pkl', 'rb'))
-    values = np.asarray(values)
-    print("values", values)
-    return model.predict(values.reshape(1, -1))[0]
+@app.route('/ensemble')
+def ensemble():
+    return render_template('ensemble.html')
 
-    # int_features = [float(x) for x in request.form.values()]
-    # final_features = [np.array(int_features)]
-    # prediction = model.predict(final_features)
-    # print(prediction)
-    # # echo(prediction)
-    # if prediction==0:
-    #     return render_template('svm.html',
-    #                            prediction_text='Low chances of patient having diabetes'.format(prediction),
-    #                            )
-    # else:
-    #     return render_template('svm.html',
-    #                            prediction_text='High chances of patient having diabetes'.format(prediction),
-    #                           )
-
+# ...
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     try:
@@ -45,17 +40,15 @@ def predict():
             values = to_predict_list
             print("form", to_predict_dict)
             print("values", values)
-            model = pickle.load(open('heart.pkl', 'rb'))
+            model = pickle.load(open('one.pkl', 'rb'))
             values = np.asarray(values)
-            ans = model.predict(values.reshape(1, -1))[0]
-            print("ans", ans)
+            pred = model.predict(values.reshape(1, -1))[0]
+            print("ans", pred)
             # return ans
             # print("pred", pred)
+            
     except:
         message = "Please enter valid Data"
         return render_template("home.html", message = message)
 
-    return render_template('index1.html')
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return render_template('predict.html', pred = pred)
