@@ -44,6 +44,11 @@
         width: 100%;
         text-align: center;
       }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     </style>
   </head>
   <body class="font-family: 'Merriweather', serif;">
@@ -86,7 +91,7 @@
     </nav>
     <div class="container">{% block content %} {% endblock %}</div>
     <!-- Footer -->
-    <footer class="bg-dark text-center text-white">
+    <footer class="bg-dark text-center text-white mt-lg-4">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2022 Copyright:

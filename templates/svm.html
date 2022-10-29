@@ -8,46 +8,46 @@
           <h1>{% block title %} SVM {% endblock %}</h1>
           <!-- <h1 class="mt-xl-2 mb-xl-5">Cardio Vascular Disease</h1> -->
         </center>
-        <div class="mt-xl-2">
+        <div class="mt-xl-2 ">
           <div class="form-row mt-xl-4">
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Age in years" name="age" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Age in years" name="age" required min="1" max="99">
             </div>
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Gender 1:M 0:F" name="sex" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Gender 1:M 0:F" name="sex" required min="0" max="1">
             </div>
           </div>
           <div class="form-row mt-xl-4">
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Chest Pain Type" name="chest pain type" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Chest Pain 1:No 2:Mild 3:Moderate 4:Severe" name="chest pain type" required min="1" max="4">
             </div>
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Resting BP S" name="resting bp s" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Resting BP" name="resting bp s" required min="0" max="200">
             </div>
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Cholesterol" name="cholesterol" required>
-            </div>
-          </div>
-          <div class="form-row mt-xl-4">
-            <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Fasting Blood Sugar" name="fasting blood sugar" required>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Resting ECG" name="resting ecg" required>
-            </div>
-            <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Max Heart Rate" name="max heart rate" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Cholesterol" name="cholesterol" required min="0" max="700">
             </div>
           </div>
           <div class="form-row mt-xl-4">
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Exercie angina" name="exercise angina" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Fasting Blood Sugar" name="fasting blood sugar" required min="0" max="1">
             </div>
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="Oldpeak" name="oldpeak" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Resting ECG" name="resting ecg" required min="0" max="2">
             </div>
             <div class="col">
-              <input type="text" class="form-control p-xl-4" placeholder="ST Slope" name="ST slope" required>
+              <input type="number" class="form-control p-xl-4" placeholder="Max Heart Rate" name="max heart rate" required min="0" max="500">
+            </div>
+          </div>
+          <div class="form-row mt-xl-4">
+            <div class="col">
+              <input type="number" class="form-control p-xl-4" placeholder="Exercie angina" name="exercise angina" required min="0" max="1">
+            </div>
+            <div class="col">
+              <input type="number" class="form-control p-xl-4" placeholder="Oldpeak" name="oldpeak" required min="-3" max="7" >
+            </div>
+            <div class="col">
+              <input type="number" class="form-control p-xl-4" placeholder="ST Slope" name="ST slope" required min="0" max="3">
             </div>
           </div>
           <div class="text-center mt-xl-4">
