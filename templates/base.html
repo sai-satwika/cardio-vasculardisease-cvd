@@ -30,9 +30,14 @@
     <style>
       body {
         font-family: "Merriweather", serif;
+        background-color: #85ffbd;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
       }
-      ul {
-        color: #ffffff;
+     
+      .container-fluid {
       }
       li:hover {
         color: black;
@@ -44,17 +49,48 @@
         width: 100%;
         text-align: center;
       }
+      .btn {
+        background: #002afa;
+        background-image: -webkit-linear-gradient(top, #002afa, #2980b9);
+        background-image: -moz-linear-gradient(top, #002afa, #2980b9);
+        background-image: -ms-linear-gradient(top, #002afa, #2980b9);
+        background-image: -o-linear-gradient(top, #002afa, #2980b9);
+        background-image: linear-gradient(to bottom, #002afa, #2980b9);
+        -webkit-border-radius: 10;
+        -moz-border-radius: 10;
+        border-radius: 10px;
+        font-family: Georgia;
+        color: #ffffff;
+        font-size: 30px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        background: #009dff;
+        background-image: -webkit-linear-gradient(top, #009dff, #0099ff);
+        background-image: -moz-linear-gradient(top, #009dff, #0099ff);
+        background-image: -ms-linear-gradient(top, #009dff, #0099ff);
+        background-image: -o-linear-gradient(top, #009dff, #0099ff);
+        background-image: linear-gradient(to bottom, #009dff, #0099ff);
+        text-decoration: none;
+      }
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
+      .nav-link:hover{
+        color: black;
+      }
     </style>
   </head>
   <body class="font-family: 'Merriweather', serif;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fs-3">
+    <nav class="navbar navbar-expand-lg navbar-dark fs-3">
       <div class="container-fluid">
-        <a class="navbar-brand fs-2 ml-lg-4" href="{{ url_for('home') }}"
+        <a
+          class="navbar-brand fs-1 ml-lg-4 text-black font-weight-bold"
+          href="{{ url_for('home') }}"
           >Cardio Vascular Disease</a
         >
         <button
@@ -73,17 +109,17 @@
           id="navbarNav"
         >
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('svm') }}">SVM</a>
+            <li class="nav-item ">
+              <a class="nav-link" style="color: #002afa;" onmouseover="this.style.color= '#802afa'"  onMouseOut="this.style.color='#002afa'" href="{{ url_for('svm') }}">SVM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('ann') }}">ANN</a>
+              <a class="nav-link" style="color: #002afa;" onmouseover="this.style.color= '#802afa'"  onMouseOut="this.style.color='#002afa'" href="{{ url_for('ann') }}">ANN</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('knn') }}">KNN</a>
+              <a class="nav-link"  style="color: #002afa;" onmouseover="this.style.color= '#802afa'"  onMouseOut="this.style.color='#002afa'"  href="{{ url_for('knn') }}">KNN</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('ensemble') }}">Ensemble</a>
+              <a class="nav-link" style="color: #002afa;" onmouseover="this.style.color= '#802afa'"  onMouseOut="this.style.color='#002afa'" href="{{ url_for('ensemble') }}">Ensemble</a>
             </li>
           </ul>
         </div>
@@ -91,13 +127,11 @@
     </nav>
     <div class="container">{% block content %} {% endblock %}</div>
     <!-- Footer -->
-    <footer class="bg-dark text-center text-white mt-lg-4">
+    <footer class="bg-text-center text-white mt-lg-4">
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="text-center p-5 fs-3">
         © 2022 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >Cardio Vascular Disease</a
-        >
+        <a class="text-black">Cardio Vascular Disease</a>
       </div>
       <!-- Copyright -->
     </footer>
